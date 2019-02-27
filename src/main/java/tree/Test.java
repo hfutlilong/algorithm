@@ -17,14 +17,17 @@ public class Test {
         node2.setLeft(null);
         node2.setRight(null);
 
-        BinTreeNode node = new BinTreeNode();
-        node.setData(1);
-        node.setLeft(node1);
-        node.setRight(node2);
+        BinTreeNode root = new BinTreeNode();
+        root.setData(1);
+        root.setLeft(node1);
+        root.setRight(node2);
 
         TraverseBinTree traverseBinTree = new TraverseBinTree();
-        traverseBinTree.preOrderRecursive(node);
-        traverseBinTree.inOrderRecursive(node);
-        traverseBinTree.postOrderRecursive(node);
+//        traverseBinTree.preOrderRecursive(root);
+//        traverseBinTree.inOrderRecursive(root);
+//        traverseBinTree.postOrderRecursive(root);
+//        traverseBinTree.preOrder(root);
+//        traverseBinTree.inOrder(root);
+        traverseBinTree.postOrder(root);
     }
 }
