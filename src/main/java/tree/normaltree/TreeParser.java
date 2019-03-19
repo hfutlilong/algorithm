@@ -1,4 +1,4 @@
-package normaltree;
+package tree.normaltree;
 
 import java.util.ArrayList;
 import java.util.List;
