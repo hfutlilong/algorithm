@@ -1,4 +1,6 @@
-package cache;
+package cache.lrucache;
+
+import cache.lrucache.LRUCache;
 
 /**
  * @Description 测试缓存
