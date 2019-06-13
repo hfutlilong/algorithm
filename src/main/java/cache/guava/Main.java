@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class Main {
     public static Cache<String, String> localCache = CacheBuilder.newBuilder()
-            .maximumSize(10) // 缓存容量
+            .maximumSize(5) // 缓存容量
 //            .expireAfterWrite(5, TimeUnit.SECONDS) // 过期时间
             .expireAfterWrite(5, TimeUnit.SECONDS) // 过期时间
             .removalListener(notification -> {
@@ -25,8 +25,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("start size: " + localCache.size());
 
-        for (int i = 0; i < 20; i++) {
-            String a = localCache.getIfPresent(String.valueOf(i));
+        for (int i = 0; i < 10; i++) {
+            String a = localCache.getIfPresent("key_" + i);
             if (StringUtils.isBlank(a)) {
                 localCache.put("key_" + i, "value_" + i);
             }
@@ -43,7 +43,7 @@ public class Main {
 //        System.out.println("sss" + localCache.getIfPresent(String.valueOf(18)));
 
         System.out.println("end size: " + localCache.size());
-        localCache.invalidateAll();
-        System.out.println("end size: " + localCache.size());
+//        localCache.invalidateAll();
+//        System.out.println("end size: " + localCache.size());
     }
 }
