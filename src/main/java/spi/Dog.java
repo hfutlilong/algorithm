@@ -1,4 +1,4 @@
-package test.spi;
+package spi;
 
 public class Dog implements Animal {
     @Override

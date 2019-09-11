@@ -1,8 +1,7 @@
-package test;
+package spi;
 
 import javassist.*;
 import org.apache.dubbo.common.extension.ExtensionLoader;
-import test.spi.Animal;
 
 import java.lang.reflect.Method;
 import java.util.ServiceLoader;
